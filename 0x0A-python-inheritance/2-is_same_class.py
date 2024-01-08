@@ -2,7 +2,7 @@
 """ defines a class-checking function """
 
 def is_same_class(obj, a_class):
-    """ returns true if object is the exact instance """
+    """ Checks if an object is exactly an instance of given class
 
     Args:
         obj (any): The object to check.
