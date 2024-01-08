@@ -6,9 +6,9 @@ def inherits_from(obj, a_class):
 
     Args:
         obj(any): The object to check
-        a_class(type): a_class that inherits directly or indirectly
+        a_class(type): The class to match the type of obj to.
         Returns:
-            if obj is an instance of a class that inherited directly or indirectly - True
+            if obj is inherited instance of a_class - True
             Otherwise - False
 
             """
