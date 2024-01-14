@@ -45,3 +45,7 @@ class Square(Rectangle):
         self.__update(*args)
     elif kwargs:
         self.__update(**kwargs)
+
+    def to_dictionary(self, id, size, x, y):
+        '''method that returns the dictionary display of the sqaure'''
+         return{"id":self.id, "size":self.size, "x":self.x, "y":self.y}
