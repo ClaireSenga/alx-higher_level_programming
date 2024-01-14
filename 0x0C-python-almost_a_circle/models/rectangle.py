@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''module for base class Rectangle'''
-from models.base import Base
+from model.base import Base
 
 class Rectangle(Base):
     '''inherited class Rectangle'''
@@ -98,3 +98,7 @@ class Rectangle(Base):
         self.__update(*args)
     elif kwargs:
         self.__update(**kwargs)
+
+    def to_dictionary(self, id, width, height, x, y):
+    '''method that returns the dictionary display of the rectangle.'''
+    return{"id":self.id, "width":self.__width, "height";self.__height, "x":self.__x, "y":self.__y}
