@@ -101,3 +101,13 @@ class Base:
                             "x": row [2], "y": row[3]}
                     ret.append(cls.create(**d))
                 return ret
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        '''method that opens a window all rectangles and squares.'''
+        import turtle
+        import time
+        from random import randrage
+        turtle.screen().colomode(255)
+        for i in list_rectangle + list_squares:
+
