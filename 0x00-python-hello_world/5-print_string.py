@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 str = "Holberton School"
-print(3 * str)
-print(str[:9])
+print("%s " % str * 3) #prints str 3x
+alt_str = "Holberton"
+print("%s" % alt_str) #prints alt_str
