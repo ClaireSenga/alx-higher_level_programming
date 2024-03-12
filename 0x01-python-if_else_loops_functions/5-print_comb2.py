@@ -3,4 +3,4 @@ for i in range(100):
     if i == 99:
         print("{}".format(i), end='')
     else:
-        print("{},".format(i), end='') #no space between end with space is alreadt embedded in print
+        print("{}, ".format(i), end='')   #no space between end with space is already embedded in print
