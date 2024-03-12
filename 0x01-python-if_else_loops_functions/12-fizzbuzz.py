@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 def fizzbuzz():
+
     for fizzbuzz in range(1, 101):
         if fizzbuzz % 3 == 0:
             print("Fizz", end=' ')
@@ -12,6 +13,4 @@ def fizzbuzz():
             print("FizzBuzz", end=' ')
 
         else:
-            print(fizzbuzz,end=' ')  #remaining numbers
-fizzbuzz()
-
+            print(fizzbuzz, end=' ')  # remaining numbers
