@@ -6,7 +6,7 @@ def uppercase(str):
     for char in str:
         if 'a' <= char <= 'z':
             # convert yo uppercase
-            uppercase_char = chr(ord(char) - 32)
+            uppercase_char = "{}".format(chr(ord(char) - 32))
 
         else:
             uppercase_char = char  # already uppercase, leave it
