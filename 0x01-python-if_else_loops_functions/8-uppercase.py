@@ -1,15 +1,13 @@
 #!/usr/bin/python3
 
-def uppercase(str):
-    uppercase_str = " "  # initialise empty string
-
-    for char in str:
+def uppercase(s):
+    for char in s:
         if 'a' <= char <= 'z':
-            # convert yo uppercase
-            uppercase_char = "{}".format(chr(ord(char) - 32))
-
+            print("{}".format(chr(ord(char) - 32)), end='')
         else:
-            uppercase_char = char  # already uppercase, leave it
+            print(char, end='')
+    print()
 
-        uppercase_str += uppercase_char
-    return uppercase_str
+# Test cases
+uppercase("Holberton")
+uppercase("Holberton School")
