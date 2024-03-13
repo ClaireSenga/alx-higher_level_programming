@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 
 def islower(c):
-
-
-    ireturn ord('a') <= ord(c) <= ord('z')
+    # check if char is alphabetic
+    if c.isalpha():
+        return ord('a') <= ord(c.lower()) <= ord('z')
+    else:
+        return False  # for non alphabetic char
 
 print("a is {}".format("lower" if islower("a") else "upper"))
 print("H is {}".format("lower" if islower("H") else "upper"))
