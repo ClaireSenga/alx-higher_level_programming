@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
 def islower(c):
-    if c.isalpha():
-        return 'a' <= c <= 'z'
-    else:
-        return False
+    if not c.isalpha():
+        raise ValueError("Input character must be alphabetic")
+    
+    return 'a' <= c <= 'z'
 
 print("a is {}".format("lower" if islower("a") else "upper"))
 print("H is {}".format("lower" if islower("H") else "upper"))
