@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
 def islower(c):
-    return ord('a') <= ord(c) <= ord('z')
+    if c.isalpha():
+        return 'a' <= c <= 'z'
+    else:
+        return False
 
 print("a is {}".format("lower" if islower("a") else "upper"))
 print("H is {}".format("lower" if islower("H") else "upper"))
