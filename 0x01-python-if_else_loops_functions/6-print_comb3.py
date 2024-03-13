@@ -4,4 +4,4 @@ for i in range(10):
         print("{:d}{:d},".format(i, j), end=' ' if i != 8 or j != 9 else '')
 
 # Print the combination 89 separately
-print("89")
+print(" 89")
