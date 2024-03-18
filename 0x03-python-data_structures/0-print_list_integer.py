@@ -1,8 +1,7 @@
 #!/usr/bin/python3
+
 def print_list_integer(my_list=[]):
+    # prints ints of a list
 
-    if my_list is None:
-        return
-
-    for num in my_list:  # used to iterate values
-        print("{}".format(num))
+    for i in range len(my_list):
+        print("{:d}".format(i))
