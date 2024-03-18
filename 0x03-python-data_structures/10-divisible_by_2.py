@@ -2,7 +2,7 @@
 def divisible_by_2(my_list=[]):
     # finds all multiples of 2 in list
 
-    res = []  # initialise to store new results
+    res = []   # initialise
 
     for num in my_list:
         if num % 2 == 0:
