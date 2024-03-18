@@ -5,4 +5,4 @@ def multiple_returns(sentence):
         return (None, None)  # 2 because it is a tuple
 
     else:
-        return multiple_returns(len(sentence), sentence[0])
+        return len(sentence), sentence[0]
