@@ -1,1 +1,25 @@
-python3 -m doctest -v ./tests/7-base_geometry.txt
+>>> from models.base_geometry import BaseGeometry
+>>> # Test area() method
+>>> geom = BaseGeometry()
+>>> geom.area()
+Traceback (most recent call last):
+    ...
+NotImplementedError: area() is not implemented
+
+>>> # Test integer_validator() method with valid input
+>>> geom.integer_validator("width", 10)
+>>> # Test integer_validator() method with invalid input (non-integer)
+>>> geom.integer_validator("height", "string")
+Traceback (most recent call last):
+    ...
+TypeError: height must be an integer
+>>> # Test integer_validator() method with invalid input (zero)
+>>> geom.integer_validator("length", 0)
+Traceback (most recent call last):
+    ...
+ValueError: length must be greater than 0
+>>> # Test integer_validator() method with invalid input (negative)
+>>> geom.integer_validator("depth", -5)
+Traceback (most recent call last):
+    ...
+ValueError: depth must be greater than 0
