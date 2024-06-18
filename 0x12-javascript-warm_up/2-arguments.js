@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// a script that checks no. of args via process.argv
+/* a script that checks no. of args via process.argv */
 
 if (process.argv.length == 2) {
 	console.log('No argument');
