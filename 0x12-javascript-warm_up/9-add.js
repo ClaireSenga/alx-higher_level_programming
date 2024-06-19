@@ -12,5 +12,5 @@ const int2 = parseInt(arg2);
 if isNaN(int1) || isNaN(int2)) {
   console.log('NaN');
 } else {
-  console.log(add(int1, int2))
+  console.log(add(int1, int2));
 }
