@@ -1,4 +1,3 @@
 #!/usr/bin/node
-class Rectangle {
-  // The class is currently empty
-}
+// A js empty class
+class Rectangle { };
