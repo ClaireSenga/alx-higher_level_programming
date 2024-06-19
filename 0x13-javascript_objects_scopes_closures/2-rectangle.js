@@ -9,4 +9,4 @@ class Rectangle {
   }
 }
 
-module.experts = Rectangle;	
+module.exports = Rectangle;	
