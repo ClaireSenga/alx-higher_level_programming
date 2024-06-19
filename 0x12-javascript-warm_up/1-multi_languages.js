@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//a js script that prints 3 lines
+// A js script that prints 3 lines
 
 const line1 = 'C is fun';
 const line2 = 'Python is cool';
