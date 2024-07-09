@@ -1,25 +1,14 @@
-#!/usr/bin/env python3
-# Sends a request to a URL & displays response body using requests & sys
+#!/usr/bin/python3
+"""Sends a request to the URL & displays the body of the response."""
 
-import requests
-import sys
 
-if len(sys.argv) != 2:
-    print("Usage: python script.py <URL>")
-    sys.exit(1)
+if __name__ == '__main__':
+    from sys import argv
+    from requests import get
 
-url = sys.argv[1]
+    url = argv[1]
 
-try:
-    # Send a GET request to the URL
-    response = requests.get(url)
-    
-    # Display the body of the response
-    print(response.text)
-    
-    # Check for HTTP error status codes
-    if response.status_code >= 400:
-        print(f"Error code: {response.status_code}")
-
-except requests.RequestException as e:
-    print(f"Error fetching {url}: {e}")
+    response = get(url)
+    ERR_TXT = 'Error code: {}'
+    status = response.status_code
+    print(ERR_TXT.format(status) if (status >= 400) else response.text)
