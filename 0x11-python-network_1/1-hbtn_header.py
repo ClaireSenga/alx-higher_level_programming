@@ -1,21 +1,12 @@
-#!/usr/bin/env python3
-# Sends a request to a URL & displays the value of X-Request-Id using urllib & sys
+#!/usr/bin/python3
+"""
+Displays the value of the X-Request-Id variable
+found in the header of response
+"""
 
-import urllib.request
-import sys
+if __name__ == "__main__":
+    import sys
+    import urllib.request
 
-if len(sys.argv) != 2:
-    print("Usage: python script.py <URL>")
-    sys.exit(1)
-
-url = sys.argv[1]
-
-try:
-    with urllib.request.urlopen(url) as response:
-        x_request_id = response.headers.get('X-Request-Id')
-        if x_request_id:
-            print(x_request_id)
-        else:
-            print("X-Request-Id header not found in the response.")
-except urllib.error.URLError as e:
-    print(f"Error fetching {url}: {e}")
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        print(response.headers["X-Request-Id"])

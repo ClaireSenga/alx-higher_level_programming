@@ -1,25 +1,19 @@
-#!/usr/bin/env python3
-# Sends a POST request with email as parameter & displays response body using urllib & sys
+#!/usr/bin/python3
+"""
+Sends a POST request to the passed URL with the email as a parameter,
+& displays the body of the response (decoded in utf-8)
+"""
 
-import urllib.request
-import urllib.parse
-import sys
+if __name__ == '__main__':
+    import urllib.request
+    import urllib.parse
+    import sys
 
-if len(sys.argv) != 3:
-    print("Usage: python script.py <URL> <email>")
-    sys.exit(1)
+    argv = sys.argv
+    url = argv[1]
+    email = argv[2]
+    DATA = urllib.parse.urlencode({"email": email})
+    DATA = DATA.encode('ascii')
 
-url = sys.argv[1]
-email = sys.argv[2]
-
-# Prepare the data to be sent in the POST request
-data = urllib.parse.urlencode({'email': email}).encode('utf-8')
-
-try:
-    # Send a POST request to the URL with the data
-    with urllib.request.urlopen(url, data=data) as response:
-        # Read and decode the response body
-        response_body = response.read().decode('utf-8')
-        print(response_body)
-except urllib.error.URLError as e:
-    print(f"Error fetching {url}: {e}")
+    with urllib.request.urlopen(url, DATA) as response:
+        print(response.read().decode('utf-8'))
