@@ -1,18 +1,10 @@
-#!/usr/bin/env python3
-# Fetches https://alx-intranet.hbtn.io/status using requests.
-
+#!/usr/bin/python3
+"""
+A Python script that fetches an URL with requests package
+"""
 import requests
 
-url = 'https://alx-intranet.hbtn.io/status'
-
-try:
-    response = requests.get(url)
-    response.raise_for_status()  # Raise an exception for HTTP errors (4xx or 5xx)
-    
-    # Display the body of the response in the required format
-    print("- Body response:")
-    print("\t- type:", type(response.text))
-    print("\t- content:", response.text)
-
-except requests.exceptions.RequestException as e:
-    print(f"Error fetching {url}: {e}")
+if __name__ == "__main__":
+    r = requests.get('https://alx-intranet.hbtn.io/status')
+    t = r.text
+    print('Body response:\n\t- type: {}\n\t- content: {}'.format(type(t), t))
